@@ -31101,6 +31101,9 @@ var AnnotationFactory = /*#__PURE__*/function () {
         case "FileAttachment":
           return new FileAttachmentAnnotation(parameters);
 
+        case "Sig":
+          return new SquareAnnotation(parameters);
+
         default:
           if (!subtype) {
             (0, _util.warn)("Annotation is missing the required /Subtype.");
@@ -31686,8 +31689,6 @@ var WidgetAnnotation = /*#__PURE__*/function (_Annotation2) {
 
     if (data.fieldType === "Sig") {
       data.fieldValue = null;
-
-      _this3.setFlags(_util.AnnotationFlag.HIDDEN);
     }
 
     return _this3;
