@@ -19096,6 +19096,9 @@ class AnnotationFactory {
           case "Tx":
             return new TextWidgetAnnotation(parameters);
 
+          case "Sig":
+            return new SquareAnnotation(parameters);
+
           case "Btn":
             return new ButtonWidgetAnnotation(parameters);
 
